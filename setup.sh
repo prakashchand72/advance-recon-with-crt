@@ -1,6 +1,9 @@
 #!/usr/bin/sh
 if [ ! -e /usr/bin/crt ]; then
     echo "crt tool does not exist in /usr/bin"
+    ln -s crt.py crtrunner
+    chmod +x crtrunner
+    sudo cp crtrunner /usr/bin
     chmod +x crt
     sudo cp crt /usr/bin
     echo "installed re-run the tool now"
